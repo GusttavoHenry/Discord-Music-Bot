@@ -1,5 +1,5 @@
 <h1 align="center">
-  🎶Discord-Music-Bot🎶<img width="25px" src="https://cdn.discordapp.com/attachments/1041003727429062759/1067568109294211144/Music-Bot.png"/>
+  🎶Discord-Music-Bot🎶<img width="25px" src="https://cdn.discordapp.com/attachments/1041003727429062759/1067569783517761536/Music-Bot.jpg"/>
 </h1>
 
  <p align="center">
