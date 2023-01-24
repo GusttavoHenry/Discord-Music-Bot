@@ -8,22 +8,21 @@
 
 <br>
 
-![Resultado final do projeto](https://cdn.discordapp.com/attachments/696922608343449614/1053677943748034660/Platform-game-project.jpg)
+![Resultado final do projeto](https://cdn.discordapp.com/attachments/1041003727429062759/1067570723155091536/Music-Bot.png)
 
 <br>
 
 ## 📝 Descrição 
 
-Esse projeto é um jogo de plataforma feito em JavaScript,HTML5 Canvas e Node.js
+Esse Projeto é um bot de musica feito para o Discord, ele possui diversos comandos e um sistema de busca inteligente.
 
-- Video demonstrativo: <a href="https://drive.google.com/file/d/1VtrTMPPrcw0K3GftOfJk0SrORKumierj/view?usp=share_link" target="_blank"> Clique aqui </a>  
+- Video demonstrativo: <a href="#" target="_blank"> Em Breve :) </a>  
 
 
 ## 🚀 Linguagens
 
 Esse projeto foi desenvolvido com as seguintes Linguagens:
- 
- <a href="https://github.com/GusttavoHenry" target="_blank"><img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" target="_blank"></a>
+
   <a href="https://github.com/GusttavoHenry" target="_blank"><img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" target="_blank"></a> 
   <a href="https://github.com/GusttavoHenry" target="_blank"><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" target="_blank"></a> 
   
