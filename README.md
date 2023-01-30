@@ -56,6 +56,19 @@ Esse projeto foi desenvolvido com as seguintes Linguagens:
   </tr>
 </table>
 
+## 🔎 Referencias<br>
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/kabirsingh2004">
+        <img src="https://avatars.githubusercontent.com/u/73753258?v=4" width="100px;" target=_blank" /><br>
+        <sub>
+          <b>kabirsingh2004</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 -----
 
   <h3 align="center"> Developed by <a href="https://www.linkedin.com/in/gustavo-henrique-375aba214/">Gustavo Henrique</a> ☕</h3>
