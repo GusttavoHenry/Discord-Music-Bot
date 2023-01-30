@@ -4,8 +4,8 @@ const client = require("../index");
 client.on("ready", async () => {
   console.log(`${client.user.username} Está on`);
   client.user.setActivity({
-    name: `Jogando: Rival Schools`,
-    type: ActivityType.Watching,
+    name: `Rival Schools`,
+    type: ActivityType.playing,
   });
 
   // loading database
