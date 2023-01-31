@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "removedupes",
-  description: `remove duplicate songs from queue`,
+  description: `remover sons duplicados na fila`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -25,7 +25,7 @@ module.exports = {
   run: async (client, interaction, args, queue) => {
     // Code
     let msg = await interaction.followUp(
-      `** ${client.config.emoji.time} Removing Duplicate 🎧 Songs From Queue Wait **`
+      `** ${client.config.emoji.time} Calma ai, já vou remover as musicas duplicadas aqui! **`
     );
     let tracks = queue.songs;
     const newtracks = [];
@@ -49,7 +49,7 @@ module.exports = {
     });
 
     msg.edit(
-      `** ${client.config.emoji.SUCCESS} Removed 🎧 \`${newtracks.length}\` Duplicate Songs From Queue **`
+      `** ${client.config.emoji.SUCCESS} A musica duplicada: \`${newtracks.length}\` foi removida da fila!! **`
     );
   },
 };

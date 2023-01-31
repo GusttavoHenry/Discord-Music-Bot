@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "clearqueue",
-  description: `clear current queue in server`,
+  description: `Excluir faixa atual`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -27,7 +27,7 @@ module.exports = {
     queue.remove();
     client.embed(
       interaction,
-      `${client.config.emoji.SUCCESS} Queue Cleared !!`
+      `${client.config.emoji.SUCCESS} Faixa atual Excluida !!`
     );
   },
 };

@@ -5,7 +5,7 @@ const { skip } = require("../../../handlers/functions");
 
 module.exports = {
   name: "skip",
-  description: `skip to next song in queue`,
+  description: `Pular musica`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -28,7 +28,7 @@ module.exports = {
     await skip(queue);
     client.embed(
       interaction,
-      `${client.config.emoji.SUCCESS}  Song Skipped !!`
+      `${client.config.emoji.SUCCESS}   A musica foi pulada !!`
     );
   },
 };

@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "volume",
-  description: `change volume of current queue`,
+  description: `Muda o volume da faixa atual`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -17,7 +17,7 @@ module.exports = {
   options: [
     {
       name: "amount",
-      description: `Give Volume amount in number`,
+      description: `Ceto, me diga em quantos % vc quer que eu aumente o volume?`,
       type: "NUMBER",
       required: true,
     },
@@ -35,13 +35,13 @@ module.exports = {
     if (volume > 250) {
       return client.embed(
         interaction,
-        `${client.config.emoji.ERROR} Provide Volume Amount Between 1 - 250  !!`
+        `${client.config.emoji.ERROR} eu posso aumentar o som entre 1 e 250 %, mas te recomendo deixar em 70%!`
       );
     } else {
       await queue.setVolume(volume);
       client.embed(
         interaction,
-        `${client.config.emoji.SUCCESS} Volume Set to ${queue.volume}% !!`
+        `${client.config.emoji.SUCCESS} O volume esta em ${queue.volume}% !!`
       );
     }
   },

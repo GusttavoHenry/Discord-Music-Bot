@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "247",
-  description: `toggle 24/7 system on/off`,
+  description: `ativar/desativar o sistema 24/7`,
   userPermissions: ["MANAGE_GUILD"],
   botPermissions: ["EMBED_LINKS"],
   category: "Settings",
@@ -37,7 +37,7 @@ module.exports = {
       // if (player) await player.destroy();
       client.embed(
         interaction,
-        `** ${client.config.emoji.ERROR}  24/7 System Disabled **`
+        `** ${client.config.emoji.ERROR}  Sistema 24/7 desativado  **`
       );
     } else {
       let dataOptions = {
@@ -47,7 +47,7 @@ module.exports = {
       await client.music.set(`${interaction.guild.id}.vc`, dataOptions);
       client.embed(
         interaction,
-        `** ${client.config.emoji.SUCCESS} 24/7 System Enabled **`
+        `** ${client.config.emoji.SUCCESS} Sistema 24/7 ativado**`
       );
     }
   },

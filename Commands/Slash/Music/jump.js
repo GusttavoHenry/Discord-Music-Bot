@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "jump",
-  description: `jump to a song in queue`,
+  description: `pular para uma música na fila pelo índice`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -17,7 +17,7 @@ module.exports = {
   options: [
     {
       name: "index",
-      description: `Song index in Queue`,
+      description: `Por favor me diga o nome ou o link da musica ok?!`,
       type: "NUMBER",
       required: true,
     },
@@ -38,7 +38,7 @@ module.exports = {
         interaction,
         `${
           client.config.emoji.ERROR
-        } **The Position must be between \`0\` and \`${
+        } **A posição deve ser entre \`0\` e\`${
           queue.songs.length - 1
         }\`!**`
       );
@@ -46,7 +46,7 @@ module.exports = {
       queue.jump(index).then((q) => {
         client.embed(
           interaction,
-          `** ${client.config.emoji.SUCCESS} Jumped to The Song [\`${song.name}\`](${song.url}) **`
+          `** ${client.config.emoji.SUCCESS} Ok, Pulando para a proxima musica: [\`${song.name}\`](${song.url}) **`
         );
       });
     }

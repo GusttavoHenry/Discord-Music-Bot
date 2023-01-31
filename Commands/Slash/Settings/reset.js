@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "reset",
-  description: `reset bot to default settings`,
+  description: `reseta para as configurações padrão`,
   userPermissions: ["MANAGE_GUILD"],
   botPermissions: ["EMBED_LINKS"],
   category: "Settings",
@@ -25,6 +25,6 @@ module.exports = {
   run: async (client, interaction, args, queue) => {
     // Code
     await client.music.delete(interaction.guildId)
-    client.embed(interaction,`${client.config.emoji.SUCCESS} Reseted Done !!`)
+    client.embed(interaction,`${client.config.emoji.SUCCESS} Reset feito !!`)
   },
 };

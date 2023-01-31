@@ -27,11 +27,11 @@ module.exports = {
     // Code
     let volume = Number(args[0]);
     if (!volume) {
-      return client.embed(message, `${client.config.emoji.ERROR} Please Provide Volume %`);
+      return client.embed(message, `${client.config.emoji.ERROR} Ceto, me diga em quantos % vc quer que eu aumente o volume?`);
     } else if (volume > 250) {
       return client.embed(
         message,
-        `${client.config.emoji.ERROR} Ceto, me diga em quantos % vc quer que eu aumente o volume?!!`
+        `${client.config.emoji.ERROR} eu posso aumentar o som entre 1 e 250 %, mas te recomendo deixar em 70%! `
       );
     } else {
       await queue.setVolume(volume);

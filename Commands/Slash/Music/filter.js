@@ -9,7 +9,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "filter",
-  description: `set filters in current queue`,
+  description: `Definir filtro na fila por nome`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -38,7 +38,7 @@ module.exports = {
           [
             {
               label: `Off`,
-              description: `Click to Disable Filter`,
+              description: `Clique para desabilitar o filtro`,
               value: "off",
             },
             filters
@@ -46,7 +46,7 @@ module.exports = {
               .map((value) => {
                 return {
                   label: value.toLocaleUpperCase(),
-                  description: `Click to Set ${value} Filter`,
+                  description: `Clique para definir um ${value} Filtro`,
                   value: value,
                 };
               }),
@@ -58,10 +58,10 @@ module.exports = {
       embeds: [
         new EmbedBuilder()
           .setColor(client.config.embed.color)
-          .setTitle(`Select To Enable Filters ...`)
+          .setTitle(`Selecione para habilitar um filtro ...`)
           .setFooter(client.getFooter(interaction.user))
           .setDescription(
-            `> Click on below dropdown Menu and Select a Filter To Add Filter in Queue !!`
+            `>  Clique no menu suspenso abaixo e selecione um filtro para adicionar um filtro a fila!!`
           ),
       ],
       components: [row],
@@ -77,7 +77,7 @@ module.exports = {
         if (menu.customId === "filter-menu") {
           if (menu.user.id !== interaction.user.id) {
             return menu.followUp({
-              content: `You are not author of this interaction`,
+              content: `Você não é o autor desta interação!`,
               ephemeral: true,
             });
           }
@@ -85,7 +85,7 @@ module.exports = {
           if (filter === "off") {
             queue.filters.clear();
             menu.followUp({
-              content: `${client.config.emoji.SUCCESS} Queue Filter Off !!`,
+              content: `${client.config.emoji.SUCCESS} Filtro de Fila Desativado!!`,
               ephemeral: true,
             });
           } else {

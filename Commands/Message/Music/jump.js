@@ -29,7 +29,7 @@ module.exports = {
     if (!index) {
       return client.embed(
         message,
-        `${client.config.emoji.ERROR} Por favor me dia o nome ou o link da musica ok?!`
+        `${client.config.emoji.ERROR} Por favor me diga o nome ou o link da musica ok?!`
       );
     }
     let song = queue.songs[index];

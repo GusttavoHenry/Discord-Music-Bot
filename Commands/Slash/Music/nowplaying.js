@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "nowplaying",
-  description: `see which song playing current song`,
+  description: `Musica do momento`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -32,24 +32,24 @@ module.exports = {
           .setColor(client.config.embed.color)
           .setThumbnail(song.thumbnail)
           .setAuthor({
-            name: `Now Playing`,
+            name: `Tocando agora 🎶`,
             iconURL: song.thumbnail,
             url: song.url,
           })
           .setDescription(`** [${song.name}](${song.streamURL}) **`)
           .addFields([
             {
-              name: `** Duration **`,
+              name: `** Duração **`,
               value: ` \`${queue.formattedCurrentTime}/${song.formattedDuration} \``,
               inline: true,
             },
             {
-              name: `** Requested By **`,
+              name: `** Pedido por: **`,
               value: ` \`${song.user.tag} \``,
               inline: true,
             },
             {
-              name: `** Author **`,
+              name: `** Autor **`,
               value: ` \`${song.uploader.name}\``,
               inline: true,
             },

@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "play",
-  description: `play song by song Name/Link`,
+  description: `Toco a musica que vc quiser! é só digitar o nome ou o link dela 😉`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -17,7 +17,7 @@ module.exports = {
   options: [
     {
       name: "song",
-      description: `song Name/Link`,
+      description: `Musica Nome/Link`,
       type: "STRING",
       required: true,
     },
@@ -40,7 +40,7 @@ module.exports = {
     });
     interaction
       .followUp({
-        content: `Searching \`${song}\``,
+        content: `Um minuto, vou procurar pela musica: \`${song}\` Aqui rapidinho`,
         ephemeral: true,
       })
       .then((msg) => {

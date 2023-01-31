@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "stop",
-  description: `destroy current queue`,
+  description: `Para a faixa atual por completo`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -27,7 +27,7 @@ module.exports = {
     queue.stop()
     client.embed(
       interaction,
-      `${client.config.emoji.SUCCESS} Queue Destroyed !!`
+      `${client.config.emoji.SUCCESS} A musica foi parada !!`
     );
   },
 };

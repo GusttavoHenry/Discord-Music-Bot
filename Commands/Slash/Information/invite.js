@@ -5,7 +5,7 @@ const { links } = require("../../../settings/config");
 
 module.exports = {
   name: "invite",
-  description: `Get My Invite Link to add me`,
+  description: `Me adicina ae! é só pegar meu convite 😊 !!`,
   userPermissions: ["SEND_MESSAGES"],
   botPermissions: ["EMBED_LINKS"],
   category: "Information",
@@ -27,7 +27,7 @@ module.exports = {
     // Code
     client.embed(
         interaction,
-        `[\`Click to Invite Me\`](${links.inviteURL.replace(
+        `[\`Clique aqui para me adicionar\`](${links.inviteURL.replace(
           "BOTID",
           client.user.id
         )})`

@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "setupmusic",
-  description: `setup music channel in server`,
+  description: `configurar canal de música no servidor`,
   userPermissions: ["MANAGE_CHANNELS"],
   botPermissions: ["MANAGE_CHANNELS"],
   category: "Settings",
@@ -31,16 +31,16 @@ module.exports = {
     if (oldChannel) {
       return client.embed(
         interaction,
-        `** ${client.config.emoji.ERROR} Music Request Channel already Setup in ${oldChannel} Delete first and Setup Again **`
+        `** ${client.config.emoji.ERROR} Canal de solicitação de música já configurado em ${oldChannel} Exclua primeiro e a configure novamente **`
       );
     } else {
       interaction.guild.channels
         .create({
-          name: `${client.user.username}-requests`,
+          name: `${client.user.username}-Pedidos`,
           type: ChannelType.GuildText,
           rateLimitPerUser: 3,
-          reason: `for music bot`,
-          topic: `Music Request Channel for ${client.user.username}, Type Song Name or Link to Play Song`,
+          reason: `Para o bot de musica`,
+          topic: `Canal de solicitação de música para ${client.user.username}, Digite o nome da música ou link para reproduzir a música `,
         })
         .then(async (ch) => {
           await ch
@@ -59,7 +59,7 @@ module.exports = {
                   });
                   client.embed(
                     interaction,
-                    `${client.config.emoji.SUCCESS} Successfully Setup Music System in ${ch}`
+                    `${client.config.emoji.SUCCESS} Configuração feita com sucesso no sistema de música em: ${ch}`
                   );
                 });
             });

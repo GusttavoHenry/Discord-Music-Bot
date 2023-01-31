@@ -9,7 +9,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "help",
-  description: `need help ? here is my all commands`,
+  description: `Prescisando de ajuda? veja meus comandos 😉`,
   userPermissions: ["SEND_MESSAGES"],
   botPermissions: ["EMBED_LINKS"],
   category: "Information",
@@ -30,8 +30,8 @@ module.exports = {
   run: async (client, interaction, args, queue) => {
     // Code
     const emoji = {
-      Information: "🔰",
-      Music: "🎵",
+      Information: "📌",
+      Music: "🎶",
       Settings: "⚙️",
     };
 
@@ -44,21 +44,21 @@ module.exports = {
     let raw = new ActionRowBuilder().addComponents([
       new StringSelectMenuBuilder()
         .setCustomId("help-menu")
-        .setPlaceholder(`Click to see my all Category`)
+        .setPlaceholder(`Clique aqui para ir ao menu principa`)
         .addOptions(
           [
             {
-              label: `Home`,
+              label: `Menu`,
               value: "home",
               emoji: `🏘️`,
-              description: `Click to Go On HomePage`,
+              description: `Clique aqui para ir ao menu principal`,
             },
             client.scategories.map((cat) => {
               return {
                 label: `${cat.toLocaleUpperCase()}`,
                 value: cat,
                 emoji: emoji[cat],
-                description: `Click to See Commands of ${cat}`,
+                description: `Clique para ver os comandos de ${cat}`,
               };
             }),
           ].flat(Infinity)
@@ -73,12 +73,12 @@ module.exports = {
       })
       .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
       .setDescription(
-        `** An advanced  Music System with Audio Filtering A unique Music Request System and way much more! **`
+        `**  É hora do show baby!, Toco qualquer musica que vc quiser!, tudo que vc prescisa fazer é me chamar atravéz do meu comando a!, que eu dou uma animada aqui no servidor! **`
       )
       .addFields([
         {
-          name: `Stats`,
-          value: `>>> ** :gear: \`${allcommands}\` Commands \n :file_folder: \`${allguilds}\` Guilds \n ⌚️ ${botuptime} Uptime \n 🏓 \`${client.ws.ping}\` Ping \n  Made by [\` Tech Boy Development \`](https://discord.gg/PcUVWApWN3) **`,
+          name: `Status`,
+          value: `>>> ** :gear: \`${allcommands}\` Comandos \n :file_folder: \`${allguilds}\` Servidores \n ⏱ ${botuptime} Uptime \n 🪁 \`${client.ws.ping}\` Ping \n  Feito por [\` Gusttavo Henry \`](#) **`,
         },
       ])
       .setFooter(client.getFooter(interaction.user));
@@ -107,7 +107,7 @@ module.exports = {
                   new EmbedBuilder()
                     .setColor(client.config.embed.color)
                     .setTitle(
-                      `${emoji[directory]} ${directory} Commands ${emoji[directory]}`
+                      `${emoji[directory]} ${directory} Comandos ${emoji[directory]}`
                     )
                     // .setThumbnail(interaction.guild.iconURL({ dynamic: true }))
                     .setDescription(

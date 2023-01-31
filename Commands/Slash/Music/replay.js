@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "replay",
-  description: `replay current song of queue`,
+  description: `reproduzir a musica atual novamente`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -27,7 +27,7 @@ module.exports = {
     queue.seek(0)
     client.embed(
       interaction,
-      `${client.config.emoji.SUCCESS} Replaying Track !!`
+      `${client.config.emoji.SUCCESS} Mais uma vez?, ok vou repetir a musica O(∩_∩)O`
     );
   },
 };

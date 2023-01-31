@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "ping",
-  description: `get ping of bot`,
+  description: `Veja o ping do bot`,
   userPermissions: ["SEND_MESSAGES"],
   botPermissions: ["EMBED_LINKS"],
   category: "Information",

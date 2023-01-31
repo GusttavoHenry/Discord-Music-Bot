@@ -7,7 +7,7 @@ const { msToDuration } = require("../../../handlers/functions");
 
 module.exports = {
   name: "stats",
-  description: `see stats of bot`,
+  description: `Veja o status do bot`,
   userPermissions: ["SEND_MESSAGES"],
   botPermissions: ["EMBED_LINKS"],
   category: "Information",
@@ -39,7 +39,7 @@ module.exports = {
             .setTitle("__**Stats:**__")
             .addFields([
               {
-                name: `⏳ Memory Usage`,
+                name: `⏳ Uso De Memoria`,
                 value: `\`${(
                   process.memoryUsage().heapUsed /
                   1024 /
@@ -56,17 +56,17 @@ module.exports = {
                 value: `\`${msToDuration(client.uptime)}\``,
               },
               {
-                name: `📁 Users`,
+                name: `📁 Usuarios`,
                 value: `\`${client.users.cache.size} \``,
                 inline: true,
               },
               {
-                name: `📁 Servers`,
+                name: `📁 Servidores`,
                 value: `\`${client.guilds.cache.size}\``,
                 inline: true,
               },
               {
-                name: `📁 Channels`,
+                name: `📁 Canais`,
                 value: `\`${client.channels.cache.size}\``,
                 inline: true,
               },
@@ -92,17 +92,17 @@ module.exports = {
                 }\`\`\``,
               },
               {
-                name: `🤖 CPU usage`,
+                name: `🤖 Uso de CPU `,
                 value: `\`${percent.toFixed(2)}%\``,
                 inline: true,
               },
               {
-                name: `🤖 Arch`,
+                name: `🤖 Arco`,
                 value: `\`${os.arch()}\``,
                 inline: true,
               },
               {
-                name: `💻 Platform`,
+                name: `💻 Platforma`,
                 value: `\`\`${os.platform()}\`\``,
                 inline: true,
               },

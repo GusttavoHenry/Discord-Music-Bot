@@ -5,7 +5,7 @@ const { swap_pages } = require("../../../handlers/functions");
 
 module.exports = {
   name: "queue",
-  description: `see current queue with pagination`,
+  description: `Ver a faixa atual`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -26,7 +26,7 @@ module.exports = {
   run: async (client, interaction, args, queue) => {
     // Code
     if (!queue.songs.length) {
-      return client.embed(interaction, `${client.config.emoji.ERROR} Nothing in Queue`);
+      return client.embed(interaction, `${client.config.emoji.ERROR} Não há nada na fila!!`);
     } else {
       let embeds = await client.getQueueEmbeds(queue);
       await swap_pages(interaction, embeds);

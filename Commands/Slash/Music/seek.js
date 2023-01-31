@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "seek",
-  description: `seek then current song`,
+  description: `Procuarar a musica atual`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -17,7 +17,7 @@ module.exports = {
   options: [
     {
       name: "amount",
-      description: `Give seek amount in number`,
+      description: `Dê a quantidade de busca em número`,
       type: "NUMBER",
       required: true,
     },
@@ -36,7 +36,7 @@ module.exports = {
     await queue.seek(seek);
     client.embed(
       interaction,
-      `${client.config.emoji.SUCCESS} Seeked \`${seek}\` Seconds !!`
+      `${client.config.emoji.SUCCESS} Procurando por: \`${seek}\` Segundos !!`
     );
   },
 };

@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "pause",
-  description: `pause current song in queue`,
+  description: `Pausar a musica`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -28,12 +28,12 @@ module.exports = {
         queue.pause();
         client.embed(
           interaction,
-          `${client.config.emoji.SUCCESS} Queue Paused !!`
+          `${client.config.emoji.SUCCESS} Faixa pausada !!`
         );
       } else {
         client.embed(
           interaction,
-          `${client.config.emoji.ERROR} Queue already Paused !!`
+          `${client.config.emoji.ERROR} EI!, A FAIXA JÁ ESTA PAUSADA !!`
         );
       }
   },

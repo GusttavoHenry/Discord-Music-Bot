@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "playskip",
-  description: `play song by skip current song Name/Link`,
+  description: `Reproduzir a música pulando o nome/link da música atual`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -17,7 +17,7 @@ module.exports = {
   options: [
     {
       name: "song",
-      description: `song Name/Link`,
+      description: ` Musica Nome/Link`,
       type: "STRING",
       required: true,
     },
@@ -40,7 +40,7 @@ module.exports = {
       skip: true,
     });
     interaction.followUp({
-      content: `Searching \`${song}\``,
+      content: `Um minuto, vou procurar pela musica: \`${song}\`aqui rapidinho!`,
       ephemeral: true,
     });
   },

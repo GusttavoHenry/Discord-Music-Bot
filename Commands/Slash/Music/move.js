@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "move",
-  description: `move a song in current queue`,
+  description: `Mover uma música na fila`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -17,13 +17,13 @@ module.exports = {
   options: [
     {
       name: "trackindex",
-      description: `Song Index`,
+      description: `info sobre a musica`,
       type: "NUMBER",
       required: true,
     },
     {
       name: "targetindex",
-      description: `Target Song Index`,
+      description: `Índice de música de destino`,
       type: "NUMBER",
       required: true,
     },
@@ -44,12 +44,12 @@ module.exports = {
     if (songIndex > queue.songs.length - 1) {
       return client.embed(
         interaction,
-        ` **The last Song in the Queue has the Index: \`${queue.songs.length}\`**`
+        ` **A última música na fila tem a seguinte descrição: \`${queue.songs.length}\`**`
       );
     } else if (position === 0) {
       return client.embed(
         interaction,
-        `**Cannot move Song before Playing Song!**`
+        `**Não é possível mover uma música antes de reproduzi-la, ok? 😉**`
       );
     } else {
       let song = queue.songs[songIndex];
@@ -59,9 +59,9 @@ module.exports = {
       queue.addToQueue(song, position);
       client.embed(
         interaction,
-        `📑 Moved **${
+        `📑 A musica: **${
           song.name
-        }** to the **\`${position}th\`** Place right after **_${
+        }** ira para **\`${position}th\`** depois de **_${
           queue.songs[position - 1].name
         }_!**`
       );

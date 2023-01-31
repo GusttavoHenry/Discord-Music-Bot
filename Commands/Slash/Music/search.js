@@ -23,7 +23,7 @@ module.exports = {
   options: [
     {
       name: "song",
-      description: `give song url/name to play`,
+      description: `Procurar uma musica pelo nome`,
       type: "STRING",
       required: true,
     },
@@ -55,7 +55,7 @@ module.exports = {
 
     let embed = new EmbedBuilder()
       .setColor(client.config.embed.color)
-      .setTitle(`\`${query}\` Search Results`)
+      .setTitle(`\`${query}\` Encontrei alguns resultados por aqui:`)
       .setDescription(tracks.substring(0, 3800))
       //   .setThumbnail(client.user.displayAvatarURL({ dynamic: true }))
       .setFooter(client.getFooter(interaction.user));
@@ -63,13 +63,13 @@ module.exports = {
     let menuraw = new ActionRowBuilder().addComponents([
       new StringSelectMenuBuilder()
         .setCustomId("search")
-        .setPlaceholder(`Click to See Best Songs`)
+        .setPlaceholder(`Clique para ver os mais vizualizados`)
         .addOptions(
           res.map((song, index) => {
             return {
               label: song.name.substring(0, 50),
               value: song.url,
-              description: `Click to Play Song`,
+              description: `Clque para tocar a musica`,
               emoji: numberEmojis[index + 1],
             };
           })

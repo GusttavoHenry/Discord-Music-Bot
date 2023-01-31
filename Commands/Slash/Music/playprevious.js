@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "playprevious",
-  description: `play previous song of queue`,
+  description: `reproduzir a música anterior da fila`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -27,13 +27,13 @@ module.exports = {
     if (!queue.previousSongs.length) {
       return client.embed(
         interaction,
-        `${client.config.emoji.ERROR} Previous Song Not Found !!`
+        `${client.config.emoji.ERROR} Gomen, não consegui achar a musica anterior 😑 !!`
       );
     } else {
       await queue.previous().then((m) => {
         client.embed(
           interaction,
-          `${client.config.emoji.SUCCESS} Playing Previous Track !!`
+          `${client.config.emoji.SUCCESS}  Mais uma vez?, OK! vou repetir a musica O(∩_∩)O`
         );
       });
     }

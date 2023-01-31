@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "remove",
-  description: `remove a song from current queue`,
+  description: `remover uma música da faixa atual`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -17,7 +17,7 @@ module.exports = {
   options: [
     {
       name: "trackindex",
-      description: `give me song index`,
+      description: `Me diga alguma informação sobre a musica`,
       type: "NUMBER",
       required: true,
     },
@@ -36,14 +36,14 @@ module.exports = {
     if (songIndex === 0) {
       return client.embed(
         interaction,
-        `** ${client.config.emoji.ERROR} You can't Remove Current Song **`
+        `** ${client.config.emoji.ERROR} Você não pode remover a música atual **`
       );
     } else {
       let track = queue.songs[songIndex];
       queue.songs.splice(track, track + 1);
       client.embed(
         interaction,
-        `${client.config.emoji.SUCCESS} Removed \`${track.name}\` Song From Queue !!`
+        `${client.config.emoji.SUCCESS} A musica: \`${track.name}\` foi removida da fila !!`
       );
     }
   },

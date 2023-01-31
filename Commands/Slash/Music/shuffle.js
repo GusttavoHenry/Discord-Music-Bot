@@ -17,7 +17,7 @@ module.exports = {
   options: [
     {
       name: "mode",
-      description: `Choose Shuffle/Unshuffle Queue`,
+      description: `Deixa as musicas da faixa atual no modo aletorio`,
       type: "STRING",
       required: true,
       choices: [
@@ -48,13 +48,13 @@ module.exports = {
       queue.shuffle();
       client.embed(
         interaction,
-        `${client.config.emoji.SUCCESS} Suffled ${queue.songs.length} Songs !!`
+        `${client.config.emoji.SUCCESS} A faixa: ${queue.songs.length} esta no modo aleatorio !! !!`
       );
     } else if (mode === "no") {
       if (!client.shuffleData.has(`shuffle-${queue.id}`)) {
         return client.embed(
           interaction,
-          `${client.config.emoji.ERROR} No Suffled Queue Found !!`
+          `${client.config.emoji.ERROR} Nenhuma fila de preenchimento encontrada !!`
         );
       } else {
         const shuffleData = client.shuffleData.get(`shuffle-${queue.id}`);
@@ -62,7 +62,7 @@ module.exports = {
         client.shuffleData.delete(`shuffle-${queue.id}`);
         client.embed(
           interaction,
-          `${client.config.emoji.SUCCESS} UnSuffled ${queue.songs.length} Songs !!`
+          `${client.config.emoji.SUCCESS} A faixa; ${queue.songs.length} não esta mais no modo aleatorio !!`
         );
       }
     }

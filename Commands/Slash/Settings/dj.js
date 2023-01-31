@@ -7,7 +7,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "dj",
-  description: `DJ System`,
+  description: `Sistema de DJ ligado/desligado`,
   userPermissions: ["MANAGE_GUILD"],
   botPermissions: ["MANAGE_GUILD"],
   category: "Settings",
@@ -20,12 +20,12 @@ module.exports = {
   options: [
     {
       name: "enable",
-      description: `enable dj system in your server`,
+      description: `habilita o sistema dj no seu servidor`,
       type: "SUB_COMMAND",
       options: [
         {
           name: "role",
-          description: `mention a role for dj system`,
+          description: `mencione um papel para o sistema dj`,
           type: ApplicationCommandOptionType.Role,
           required: true,
         },
@@ -33,12 +33,13 @@ module.exports = {
     },
     {
       name: "disable",
-      description: `disable dj system in your server`,
+      description: `Desabilita o sistema do dj no seu servidor`,
       type: ApplicationCommandOptionType.Subcommand,
     },
     {
       name: "commands",
-      description: `show all dj slash commands`,
+      description: `mostrar todos os comandos de barra dj
+      `,
       type: ApplicationCommandOptionType.Subcommand,
     },
   ],
@@ -60,7 +61,7 @@ module.exports = {
           await client.music.set(`${interaction.guild.id}.djrole`, role.id);
           client.embed(
             interaction,
-            `${client.config.emoji.SUCCESS} ${role} Role Added to DJ Role`
+            `${client.config.emoji.SUCCESS} ${role} Função adicionada à função de DJ`
           );
         }
         break;
@@ -69,7 +70,7 @@ module.exports = {
           await client.music.set(`${interaction.guild.id}.djrole`, null);
           client.embed(
             interaction,
-            `${client.config.emoji.SUCCESS} DJ System Disabled`
+            `${client.config.emoji.SUCCESS} Sistema do DJ Desativado`
           );
         }
         break;
@@ -82,7 +83,7 @@ module.exports = {
 
           client.embed(
             interaction,
-            `**DJ Commands** \n \`\`\`js\n${djcommands}\`\`\``
+            `**DJ Comandos** \n \`\`\`js\n${djcommands}\`\`\``
           );
         }
         break;

@@ -4,7 +4,7 @@ const { Queue } = require("distube");
 
 module.exports = {
   name: "resume",
-  description: `resume paused song in queue`,
+  description: `Retomar a música pausada na fila`,
   userPermissions: ["CONNECT"],
   botPermissions: ["CONNECT"],
   category: "Music",
@@ -28,12 +28,12 @@ module.exports = {
       queue.resume();
       client.embed(
         interaction,
-        `${client.config.emoji.SUCCESS} Queue Resumed !!`
+        `${client.config.emoji.SUCCESS} Faixa retomada !!`
       );
     } else {
       client.embed(
         interaction,
-        `${client.config.emoji.ERROR} Queue already Resumed !!`
+        `${client.config.emoji.ERROR} EI!!! A FAIXA JA VOLTOU A TOCAR!!`
       );
     }
   },
