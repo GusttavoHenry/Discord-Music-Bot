@@ -1,7 +1,7 @@
 {
   "name": "Dj_Akira",
   "version": "1.0.0",
-  "description": "I'm a Discord Bot Developer and here is mine Discord Music Bot",
+  "description": "Student of science computing in Brazil and this is my firsrt discord music bot",
   "main": "index.js",
   "scripts": {
     "start": "npm run node && node index.js",
